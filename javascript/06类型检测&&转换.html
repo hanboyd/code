@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            margin:  0 auto;
+            height: 80px;
+            text-align: center;
+        }
+        th{
+            padding: 5px 30px;
+        }
+        table,
+        td,
+        th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>订单确认</h2>
+    
+</body>
+</html>
+<script>
+    // document.write(typeof 12+","+typeof('12'))
+</script>
+<!-- <script>
+    /* 隐式转换 */
+    document.write(typeof (1+1))        //number
+    document.write(typeof ('tom'+1))    //string
+    document.write(typeof (2-"tom"))    //number
+    document.write(typeof (+"123"))     //number
+</script> -->
+
+<!-- <script>
+    /* 显式转换 */
+    let str = '123'
+    console.log(typeof str + " , " + typeof Number(str) + " , " + Number(str))
+    console.log(parseInt("12px") + " , " + parseInt("12.1px"))
+    console.log(parseFloat("12px") + " , " + parseFloat("12.1px"))
+    
+</script> -->
+
+<!-- <script>
+    /* 案例
+    输入两个数，求和，打印到页面
+    */
+//    let num1 = prompt("number1 = : ")
+//    let num2 = prompt("number2 = : ")
+//    document.write(num1 + num2)
+//    alert((+num1) + (+num2))
+
+   let num1 =  +prompt("number1 = : ")
+   let num2 = +prompt("number2 = : ")
+   alert(`两数和是${num1+num2}`)
+
+</script> -->
+
+<script>
+    /* 案例
+    需求：
+    用户输入商品价格和数量，以及收货地址，自动打印订单信息
+
+    分析：
+    1. 需输入3个数据，prie num address
+    2. 需计算总价 total
+    3. 页面打印表格，里面填充数据
+    4. 使用字符串模版
+    */
+
+   let price =  +prompt("价格 ： ")
+   let num = +prompt("数量 ： ")
+   let address = prompt("地址 ： ")
+   let total = price * num
+
+document.write(`
+<table>
+        <tr>
+            <td>商品名称</td>
+            <td>商品价格</td>
+            <td>商品数量</td>
+            <td>总价</td>
+            <td>收货地址</td>
+        </tr>
+        
+        <tr>
+            <td>a</td>
+            <td>${price}</td>
+            <td>${num}</td>
+            <td>${total}</td>
+            <td>${address}</td>
+        </tr>
+    </table>
+`)
+
+</script>

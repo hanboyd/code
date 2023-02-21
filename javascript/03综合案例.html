@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                display: flex;
+                width: 700px;
+                height: 300px;
+                border-left: 1px solid pink;
+                border-bottom: 1px solid pink;
+                margin: 50px auto;
+                justify-content: space-around;
+                align-items: flex-end;
+                text-align: center;
+
+            }
+            .box > div {
+
+                display: flex;
+                width: 50px;
+                background-color: pink;
+                flex-direction: column;
+                justify-content: space-between;
+              
+
+
+            }
+            .box div span {
+                margin-top: -20px;
+            }
+            .box div h4 {
+                margin-bottom: -35px;
+                width: 70px;
+                margin-left: -10px;
+            }
+        </style>
+    </head>
+    <body></body>
+</html>
+<!-- 案例 
+                需求：用户输入四个季度的数据，生成柱状图
+                
+                分析：
+                1. 需要输入4次，所以可以把4个数据放入一个数组 -》使用循环弹出 4 个框
+                2. 遍历数组，根据数据生成4个柱状图，高度是输入的数据
+                    1. 柱状图就是div盒子，设置宽度，高度是输入的数据
+                    2. div里包含显示的数字和 第n季度
+                -->
+<script>
+    let arr = []
+    for (let i = 1; i <= 4; i++) {
+        arr.push(prompt(`输入第${i}季度数据：`))
+    }
+    document.write(`<div class="box">`)
+    for (let i = 0; i <4; i++) {
+        document.write(`
+        <div style="height: ${arr[i]}px;">
+            <span>${arr[i]}</span>
+            <h4>第${i+1}季度</h4>
+        </div>
+        `)
+        
+    }
+    document.write(`</div>`)
+</script>

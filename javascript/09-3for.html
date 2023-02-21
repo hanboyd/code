@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 100px;
+
+            padding: 5px 10px;
+            border: 1px solid pink;
+            margin: 2px;
+            border-radius: 5px;
+            text-align: center;
+            
+
+            
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /* for */
+
+    // for(let i = 0 ; i < 3 ; i++){
+    //     console.log(i);
+    // }
+
+    /* 案例一  输出 1 - 100*/
+    // for( let i = 1 ; i <= 100 ;i++){
+    //     document.write(i + " ")
+    // }
+
+    /* 案例二 求 1 - 100 的偶数和 */
+    // let total = 0
+    // for( let i = 1 ;i <= 100;i++){
+    //     if (i % 2 === 0 ) {
+    //         total += i
+    //     }  
+    // }
+    // document.write("total = " + total)
+
+    /* 案例三 页面打印 15 个小星星 */
+    // for( let i = 0 ; i < 5 ; i++){
+    //     document.write("*")
+    // }
+
+    /* 案例四 遍历数组 */
+    // let arr = [1,2,3,4,5]
+    // for(let  i = 0 ; i < arr.length ; i++)
+    // {
+        
+    //     if (i === 2) {
+    //         continue
+    //     }
+    //     document.write(arr[i] + " ")
+    // }
+
+
+</script>
+
+
+<script>
+    //嵌套循环练习
+
+    /* 案例一 打印 3 行 4 列 的星星 */
+    // for( let i = 1 ; i <= 3 ;i++){
+    //     for(let j = 1 ; j <= 4 ;j++){
+    //         document.write("✨")
+    //     }
+    //     document.write("<br>")
+
+    // }
+
+    /* 案例二 打印 三角形 星星 */
+    // for(let i = 1 ; i <= 5 ; i++){
+    //     for(let j = 1 ; j <= i ; j++){
+    //         document.write("✨")
+    //     }
+    //     document.write("<br>")
+    // }
+
+    /* 案例三 打印 乘法表 */
+    for(let i = 1 ;i <= 9 ; i++){
+        for(let j = 1 ;j <= i ; j++ ){
+            document.write(`<span>${i} * ${j} = ${i*j}</span>`)
+        }
+        document.write("<br>")
+    }
+</script>

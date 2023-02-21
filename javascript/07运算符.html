@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /*  赋值运算符 = ：
+     对变量赋值
+     */
+    let num = 1
+    console.log(num+=1);
+    /* 自增运算符 
+    +1
+    */
+    console.log(num++ + " , " + num)
+    console.log(++num + " , " + num);
+    /* 比较运算符 ：
+    == 值相等  : 包含隐式转换
+    === 值和类型相等 ；
+    !== 不全等
+    */
+   console.log(2 == "2")    //true
+   console.log(2 === "2")   //false
+   console.log((NaN === NaN) + " , " + (NaN==NaN)) //false, false
+
+   /* 逻辑运算符
+    &&: 一假 全假
+    ||：一真 全真
+    ! ：反
+   */
+</script>
+
+<!-- <script>
+    /* 练习：判断一个数是4的倍数，且不是100的倍数 */
+    let num = prompt("输入以一个数 ： ")
+    console.log((num%4 === 0) && (num%100 !== 0 ));
+</script> -->
