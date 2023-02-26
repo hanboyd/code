@@ -441,7 +441,75 @@ for(外部记录循环次数的变量 ； 循环条件 ；变化值){
 
 
 
-# 11. 函数
+# 11. 函数 - function
 
 
+
+> 1. 命名规范
+>    1. 小驼峰
+>    2. 动词前缀
+>    3. 动词约定
+
+
+
+| 动词 | 含义                   |
+| ---- | ---------------------- |
+| can  | 判断是否可执行某个动作 |
+| has  | 判断是否含有某个值     |
+| is   | 判断是否为某个值       |
+| get  | 获取某个值             |
+| set  | 设置某个值             |
+| load | 加载某些数据           |
+
+## 1. 参数和默认参数
+
+> 1. 实参 形参
+> 2. 默认值 undefined ； **<u>undefined+undefined ==NaN</u>**
+
+```javascript
+function aFunc(num1,num2){
+  //函数体
+}
+```
+
+```javascript
+<script>
+
+    function getSum(x=0,y=0){
+        console.log(x+y)
+    }
+    getSum(1,2)		//3
+		getSum(1)			//1
+    
+</script>
+```
+
+## 2. 返回值
+
+> - Return 后不接数据或无返回值，函数的返回值是 undefined
+> - return 后的数据不能换行，立即结束函数
+
+```javascript
+fucntion getSum(num1,num2){
+  return num1+num2
+}
+```
+
+## 3. 作用域
+
+> - 提高了程序逻辑的局部性
+>
+> - 增强了程序的可靠性
+>
+> - 减少了名字冲突
+> - ⚠️： <u>如在函数内部，变量没有声明，直接赋值，会被当作 全局变量 ，**不推荐**使用</u>
+
+## 4. 匿名函数 
+
+> 1. 将匿名函数赋值给一个变量，并且通过变量名调用的方式，<u>**函数表达式**</u>
+
+```javascript
+//函数表达式
+let num = function func(){}
+```
 
