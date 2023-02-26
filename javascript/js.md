@@ -507,9 +507,112 @@ fucntion getSum(num1,num2){
 ## 4. 匿名函数 
 
 > 1. 将匿名函数赋值给一个变量，并且通过变量名调用的方式，<u>**函数表达式**</u>
+>    1. 和具名函数的区别：具名函数的调用可以在任意位置 ； 函数表达式必须先声明后使用
+> 2. 立即执行函数：无需调用，立即执行 ； <u>**必须加 ；**</u> ； 第二组括号 填实参
 
 ```javascript
 //函数表达式
-let num = function func(){}
+let num = function func(x,y){}
+num(1,2)
 ```
 
+```javascript
+//立即执行函数
+//方式1
+(function (){ console.log(1) } ) ();
+//方式2
+(function () { console.log(1) } () );
+```
+
+## 5. 逻辑中断
+
+> 1. && 和 || 
+> 2. 如果两侧都为真，返回第二个结果
+
+```javascript
+console.log(false && 1) // false
+console.log(false || 1)	//true
+console.log( 1 && 2)		//2
+```
+
+## 6. 转换成boolean型
+
+> 1. 显式转换
+>
+>    <u>"" , 0 , undefined , null , false , NaN</u> 转换后为 false ， 其余都为 true
+>
+> 2. 隐式转换
+>
+>    1. 有字符串的加法 ""+1 , 结果是 1 
+>    2. 减法  - 只能运用于数字，它会使空字符串转换为 0
+>    3. null 经过数字转换后变成 0 
+>    4. undefined 经过数字转换后变成 NaN
+
+# 12. 对象 object
+
+> 1. 是一种数据类型，无序的数据集合，用来描述某一事物 ; 包含属性和行为
+> 2. 属性和值之间用 <u>：</u>隔开 ， 属性之间使用 <u> ，</u>隔开
+> 3. 使用
+>    1. 查询： 对象. 属性 ； 对象名['属性']
+>    2. 赋值： 对象.属性 = 值
+>    3. 添加:  对象名.新属性名 = 新值
+>    4. 删除： delete 对象名.属性名
+>    5. ⚠️：对于增和改，如果对象没有这个属性，增改相同
+> 4. 方法
+>    1. 由方法名和函数两部分构成 **：** 隔开
+>    2. 多个属性之间使用 **，** 分隔
+>    3. 方法是依附在对象中的函数
+>    4. 方法名含有特殊符号时， 可用 "" 或 '' 包裹
+
+```javascript
+//声明
+let obj = {}
+let objj = new Object()
+```
+
+```html
+<script>
+    let obj={
+        name: 'mi 10',
+        num:"1000000",
+        weight:'5kg',
+        address:'china'
+    }
+    console.log(obj.name)
+    obj.name='MI-10'
+    console.log(obj.name)
+    obj.newName='mMi-0001'
+    console.log(obj.newName)
+    delete obj.newName
+    console.log(obj.newName)
+</script>
+```
+
+```javascript
+let obj ={
+  uname: "tom",
+  soSomething: function(){
+		console.log('')
+  }
+}
+```
+
+## 1. 对象遍历
+
+> 1. 无序
+
+```html
+<script>
+    let obj = {
+        uname: 'tom',
+        color: 'pink',
+        age: 11
+    }
+    for (let key in obj) { 
+        // console.log(key) // 属性名(字符串) console.log(obj.'key')
+        console.log(obj[key]);
+    }
+</script>
+```
+
+# 进度： P69

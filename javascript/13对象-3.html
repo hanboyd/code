@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body></body>
+</html>
+<!-- 案例
+打印以下数据
+-->
+
+<script>
+
+    let students = [
+        {
+            name: 'a',
+            age: 18,
+            grander: 'M',
+            hometown: "hebei"
+        }, {
+            name: 'b',
+            age: 19,
+            grander: 'M',
+            hometown: "henan"
+        }, {
+            name: 'c',
+            age: 20,
+            grander: 'M',
+            hometown: "sanxi"
+        }, {
+            name: 'd',
+            age: 21,
+            grander: 'M',
+            hometown: "sandons"
+        }
+    ]
+
+    for (let i = 0; i < students.length; i++) {
+       
+        for (let key in students[i]) {
+            console.log(students[i][key])
+        }
+        console.log('\n');
+
+    }
+
+    /* 渲染成表格 */
+</script>

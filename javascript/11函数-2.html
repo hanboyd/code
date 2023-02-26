@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body></body>
+</html>
+<!-- 案例 用户输入秒数，自动转化成时分秒
+分析：
+1. 用户输入秒数（注意默认值
+2. 计算时分秒（函数），包含数字补 0 
+3. 打印输出
+
+--
+hours = praseInt（ seconds/60/60%24）
+minutes = paraseInt （seconds/60%60)
+second = paraseInt( seconds%60)
+-->
+<script>
+    // 1. 用户输入
+    let second = +prompt("输入秒数")
+    // 2. 封装函数
+    function getTime(t) { // 3. 转换
+        hours = parseInt(t / 60 / 60 % 24)
+        minutes = parseInt(t / 60 % 60)
+        seconds = parseInt(t % 60)
+        //4. 补0
+        hours = hours < 10 ? "0" + hours : hours
+        minutes = minutes < 10 ? "0" + minutes : minutes
+        seconds = seconds < 10 ? "0" + seconds : seconds
+        console.log(t%60);
+        return `转换后: ${hours}时${minutes}分${seconds}秒`
+
+    }
+    document.write(getTime(second))
+</script>
