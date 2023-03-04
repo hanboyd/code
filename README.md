@@ -3,7 +3,6 @@
 Record of study
 ---
 
----
 
 [JavaScript](./javascript/js.md)
 
